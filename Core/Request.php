@@ -1,7 +1,7 @@
 <?php
 
 
-namespace core;
+namespace Core;
 
 
 class Request
@@ -41,6 +41,14 @@ class Request
 
     public function getFormattedUrl() {
         return $this->formattedUrl;
+    }
+
+    public function isPOST() {
+        return $this->method === 'POST';
+    }
+
+    public function getFiles() {
+        return isset($_FILES) ? $_REQUEST['FILES'] : false;
     }
 
     public function getMethod() {

@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-use core\Request;
+use Core\Request;
 
 class HelloController extends Controller
 {

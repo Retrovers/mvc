@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-use core\utils\ClassUtils;
+use Core\utils\ClassUtils;
 
 class Controller
 {
@@ -17,9 +17,9 @@ class Controller
             $path .= '/' . ClassUtils::getMethodeWhoCall();
         }
 
-        if ($params['layout'] === true) require __DIR__ . '/../views/layouts/header.php';
-        require __DIR__ . '/../views/' . $path . '.php';
-        if ($params['layout'] === true) require __DIR__ . '/../views/layouts/footer.php';
+        if ($params['layout'] === true) require __DIR__ . '/../Views/layouts/header.php';
+        require __DIR__ . '/../Views/' . $path . '.php';
+        if ($params['layout'] === true) require __DIR__ . '/../Views/layouts/footer.php';
     }
 
 }
